@@ -11,6 +11,9 @@
  --color-info: #2194f3;
  --color-gray: #717171;
  --color-gray2: #4D4D4D;
+
+ --color-bg1: #FFFFFF;
+ --color-bg2: #F5F7FA;
 }
 @layer base {
  html {
