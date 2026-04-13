@@ -8,20 +8,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
           integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-
-
 </head>
 <body>
 <!--    Header/Navigation-->
-<section class="bg-[#F5F7FA]">
+<section class="bg-[#F5F7FA]" id="header">
     <div class="max-w-[1440px] mx-auto">
 
-        <header class="p-5 md:p-0 flex justify-between items-center py-5">
+        <header class="px-5 md:px-0 flex justify-between items-center py-5">
             <a href="#">
                 <img src="asset/img/logo.png" alt="">
             </a>
 
-
+<!--        Desktop Navigation   -->
             <ul class="hidden md:flex gap-16 items-center">
                 <li><a href="#" class="text-gray-900 text-[16px] font-medium">Home</a></li>
                 <li><a href="#" class="text-gray-900 text-[16px] font-normal">Service</a></li>
@@ -31,20 +29,64 @@
                 <li><a href="#" class="text-gray-900 text-[16px] font-normal">FAQ</a></li>
             </ul>
 
+<!--        Desktop Auth-->
             <ul class="hidden md:flex gap-8 items-center">
                 <li><a href="#" class="text-primary text-[16px] font-medium">Login</a></li>
                 <li class="px-5 py-2.5 border rounded-md bg-primary text-white font-medium"><a href="#" class=" ">Sign
                     Up</a></li>
             </ul>
 
-            <button>
+<!--         Mobile Hamburger-->
+            <button class="md:hidden" id="mobile-hamburger-btn">
                 <i class="fa-solid fa-bars text-primary text-4xl"></i>
             </button>
 
-<!--            <div class="bg-dark w-[300px] fixed top-0 left-0 height-[100vh]">-->
-<!--swqeqweqwe-->
-<!--            </div>-->
+<!--         Mobile Cross-->
+            <button class="hidden md:hidden" id="mobile-close-btn">
+                <i class="fa-solid fa-x text-primary text-4xl"></i>
+            </button>
         </header>
+
+        <!--    Mobile Sidebar-->
+        <aside class="bg-dark w-screen fixed top-20 left-0 h-screen transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden" id="mobile-sidebar">
+            <nav class="p-5">
+                <ul class="flex flex-col gap-4">
+                    <li class="flex items-center gap-2">
+                        <i class="fa-regular fa-house" style="color: #4caf4f;"></i>
+                        <a href="#" class="text-white text-[20px] font-medium hover:text-gray-700">Home</a>
+                    </li>
+
+                    <li class="flex items-center gap-2">
+                        <i class="fa-regular fa-house" style="color: #4caf4f;"></i>
+                        <a href="#" class="text-white text-[20px] font-medium hover:text-gray-700">Service</a>
+                    </li>
+
+                    <li class="flex items-center gap-2">
+                        <i class="fa-regular fa-house" style="color: #4caf4f;"></i>
+                        <a href="#" class="text-white text-[20px] font-medium hover:text-gray-700">Feature</a>
+                    </li>
+
+                    <li class="flex items-center gap-2">
+                        <i class="fa-regular fa-house" style="color: #4caf4f;"></i>
+                        <a href="#" class="text-white text-[20px] font-medium hover:text-gray-700">Product</a>
+                    </li>
+
+                    <li class="flex items-center gap-2">
+                        <i class="fa-regular fa-house" style="color: #4caf4f;"></i>
+                        <a href="#" class="text-white text-[20px] font-medium hover:text-gray-700">Testimonial</a>
+                    </li>
+
+                    <li class="flex items-center gap-2">
+                        <i class="fa-regular fa-house" style="color: #4caf4f;"></i>
+                        <a href="#" class="text-white text-[20px] font-medium hover:text-gray-700">FAQ</a>
+                    </li>
+
+
+
+                </ul>
+            </nav>
+        </aside>
+
         <!--    Hero Section-->
         <div class="px-6 md:px-[144px] py-[96px] flex md:flex-row flex-col items-center justify-between">
             <div>
@@ -175,135 +217,159 @@
                     <p class="text-[16px]/[24px] text-gray2">Members</p>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
 
-<!--<section class="bg-white">-->
-<!--    <div class="max-w-[1440px] mx-auto px-8 md:px-[144px] flex flex-col md:flex-row items-center justify-between">-->
+<section class="bg-white">
+    <div class="max-w-[1440px] mx-auto px-8 md:px-[144px] flex flex-col md:flex-row items-center justify-between">
 
-<!--        <div class="max-w-[442px] col-span-1 mb-5 md:mb-0">-->
-<!--            <img src="asset/img/pana.png" alt="">-->
-<!--        </div>-->
+        <div class="max-w-[442px] col-span-1 mb-5 md:mb-0">
+            <img src="asset/img/pana.png" alt="">
+        </div>
 
-<!--        <div class="max-w-[661px] px-2 md:px-0">-->
-<!--            <div class="max-w-[601px]">-->
-<!--                <h1 class="text-[36px]/[44px] font-semibold text-gray2"><span-->
-<!--                        class="">How to design your site footer like</span><br>-->
-<!--                    <span class="">we did</span></h1>-->
-<!--                <p class="text-[14px]/[20px] font-normal mt-4 text-gray">Donec a eros justo. Fusce egestas tristique-->
-<!--                    ultrices.-->
-<!--                    Nam tempor, augue nec tincidunt molestie, massa nunc varius arcu, at scelerisque elit erat a magna.-->
-<!--                    Donec quis-->
-<!--                    erat at libero ultrices mollis. In hac habitasse platea dictumst. Vivamus vehicula leo dui, at porta-->
-<!--                    nisi facilisis finibus.-->
-<!--                    In euismod augue vitae nisi ultricies, non aliquet urna tincidunt. Integer in nisi eget nulla-->
-<!--                    commodo faucibus efficitur quis massa.-->
-<!--                    Praesent felis est, finibus et nisi ac, hendrerit venenatis libero.-->
-<!--                    Donec consectetur faucibus ipsum id gravida.</p>-->
-<!--            </div>-->
-<!--            <button class="mt-8 border rounded-sm bg-primary text-white px-8 py-3.5">Learn More</button>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
+        <div class="max-w-[661px] px-2 md:px-0">
+            <div class="max-w-[601px]">
+                <h1 class="text-[36px]/[44px] font-semibold text-gray2"><span
+                        class="">How to design your site footer like</span><br>
+                    <span class="">we did</span></h1>
+                <p class="text-[14px]/[20px] font-normal mt-4 text-gray">Donec a eros justo. Fusce egestas tristique
+                    ultrices.
+                    Nam tempor, augue nec tincidunt molestie, massa nunc varius arcu, at scelerisque elit erat a magna.
+                    Donec quis
+                    erat at libero ultrices mollis. In hac habitasse platea dictumst. Vivamus vehicula leo dui, at porta
+                    nisi facilisis finibus.
+                    In euismod augue vitae nisi ultricies, non aliquet urna tincidunt. Integer in nisi eget nulla
+                    commodo faucibus efficitur quis massa.
+                    Praesent felis est, finibus et nisi ac, hendrerit venenatis libero.
+                    Donec consectetur faucibus ipsum id gravida.</p>
+            </div>
+            <button class="mt-8 border rounded-sm bg-primary text-white px-8 py-3.5">Learn More</button>
+        </div>
+    </div>
+</section>
 
-<!--<section class="bg-bg2 mt-12">-->
-<!--    <div class="max-w-[1440px] mx-auto px-6  md:px-[144px] py-8 flex flex-col md:flex-row  items-center">-->
+<section class="bg-bg2 mt-12">
+    <div class="max-w-[1440px] mx-auto px-6  md:px-[144px] py-8 flex flex-col md:flex-row  items-center">
 
-<!--        <div class="max-w-[442px] mr:0 md:mr-19.5">-->
-<!--            <img src="asset/img/customer.png" alt="">-->
-<!--        </div>-->
+        <div class="max-w-[442px] mr:0 md:mr-19.5">
+            <img src="asset/img/customer.png" alt="">
+        </div>
 
-<!--        <div class="max-w-[748px] flex flex-col  gap-3">-->
-<!--            <p class="text-[16px]/[24px] font-normal mt-4 text-gray">Maecenas dignissim justo eget nulla rutrum-->
-<!--                molestie. Maecenas lobortis sem dui,-->
-<!--                vel rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare,-->
-<!--                tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit at-->
-<!--                ligula molestie,-->
-<!--                nec molestie mi blandit. Suspendisse cursus tellus sed augue ultrices, quis tristique nulla sodales.-->
-<!--                Suspendisse eget-->
-<!--                lorem eu turpis vestibulum pretium. Suspendisse potenti. Quisque malesuada enim sapien, vitae placerat-->
-<!--                ante feugiat eget.-->
-<!--                Quisque vulputate odio neque, eget efficitur libero condimentum id. Curabitur id nibh id sem dignissim-->
-<!--                finibus ac sit amet magna.-->
-<!--            </p>-->
+        <div class="max-w-[748px] flex flex-col  gap-3">
+            <p class="text-[16px]/[24px] font-normal mt-4 text-gray">Maecenas dignissim justo eget nulla rutrum
+                molestie. Maecenas lobortis sem dui,
+                vel rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare,
+                tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit at
+                ligula molestie,
+                nec molestie mi blandit. Suspendisse cursus tellus sed augue ultrices, quis tristique nulla sodales.
+                Suspendisse eget
+                lorem eu turpis vestibulum pretium. Suspendisse potenti. Quisque malesuada enim sapien, vitae placerat
+                ante feugiat eget.
+                Quisque vulputate odio neque, eget efficitur libero condimentum id. Curabitur id nibh id sem dignissim
+                finibus ac sit amet magna.
+            </p>
 
-<!--            <h1 class="text-primary font-semibold size-5/7">Tim Smith</h1>-->
-<!--            <p class="text-gray3 font-normal size-4/6">British Dragon Boat Racing Association</p>-->
-<!--            <ul class="flex flex-wrap items-center justify-center md:justify-between gap-2 md:gap-0 mt-4">-->
-<!--                <li><img src="asset/img/custom.png" alt=""></li>-->
-<!--                <li><img src="asset/img/custom2.png" alt=""></li>-->
-<!--                <li><img src="asset/img/custom.png" alt=""></li>-->
-<!--                <li><img src="asset/img/custom2.png" alt=""></li>-->
-<!--                <li><img src="asset/img/custom.png" alt=""></li>-->
-<!--                <li><img src="asset/img/custom.png" alt=""></li>-->
-<!--                <li class="text-primary text-5/7 font-semibold justify-center mt-2 md:mt-0">-->
-<!--                    Meet All Customers <i class="fa-solid fa-arrow-right" style="color: rgb(76, 175, 79);"></i>-->
-<!--                </li>-->
-<!--            </ul>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
+            <h1 class="text-primary font-semibold size-5/7">Tim Smith</h1>
+            <p class="text-gray3 font-normal size-4/6">British Dragon Boat Racing Association</p>
+            <ul class="flex flex-wrap items-center justify-center md:justify-between gap-2 md:gap-0 mt-4">
+                <li><img src="asset/img/custom.png" alt=""></li>
+                <li><img src="asset/img/custom2.png" alt=""></li>
+                <li><img src="asset/img/custom.png" alt=""></li>
+                <li><img src="asset/img/custom2.png" alt=""></li>
+                <li><img src="asset/img/custom.png" alt=""></li>
+                <li><img src="asset/img/custom.png" alt=""></li>
+                <li class="text-primary text-5/7 font-semibold justify-center mt-2 md:mt-0">
+                    Meet All Customers <i class="fa-solid fa-arrow-right" style="color: rgb(76, 175, 79);"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
 
 <!--Footer Section Starts-->
-<!--<footer class="bg-secondary px-20 md:px-40 md:py-16 py-8 text-silver">-->
-<!--    <div class="max-w-[1440px] mx-auto">-->
-<!--        <div class="grid grid-cols-1 md:grid-cols-2">-->
-<!--            <div class="flex flex-col gap-y-5 max-w-sm">-->
-<!--                <img src="asset/img/logo_dark.png" class="w-40" alt="">-->
-<!--                <p class="text-silver size-[14px]/[20px]">Copyright © 2020 Nexcent ltd. <br> All rights reserved </p>-->
-<!--                <ul class="flex items-center gap-x-4">-->
-<!--                    <li class="max-w-[32px]"><i class="bg-gray2 text-white p-1 rounded-full fa-brands fa-instagram"></i>-->
-<!--                    </li>-->
-<!--                    <li class="max-w-[32px]"><i class="bg-gray2 text-white p-1 rounded-full fa-brands fa-facebook"></i>-->
-<!--                    </li>-->
-<!--                    <li class="max-w-[32px]"><i class="bg-gray2 text-white p-1 rounded-full fa-brands fa-skype"></i>-->
-<!--                    </li>-->
-<!--                    <li class="max-w-[32px]"><i class="bg-gray2 text-white p-1 rounded-full fa-brands fa-youtube"></i>-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--            </div>-->
-<!--            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">-->
-<!--                <div class="">-->
-<!--                    <h1 class="text-semibold text-[20px] mt-5 md:mt-0">Company</h1>-->
-<!--                    <ul class="mt-6 flex flex-col gap-y-2">-->
-<!--                        <li><a href="" class="font-normal text-[14px]/[20px]">About Us</a></li>-->
-<!--                        <li><a href="" class="text-[14px]/[20px]">Blog</a></li>-->
-<!--                        <li><a href="" class="text-[14px]/[20px]">Contact Us</a></li>-->
-<!--                        <li><a href="" class="text-[14px]/[20px]">Pricing</a></li>-->
-<!--                        <li><a href="" class="text-[14px]/[20px]">Testimonials</a></li>-->
-<!--                    </ul>-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                    <h1 class="text-semibold text-[20px] mt-5 md:mt-0">Support</h1>-->
-<!--                    <ul class="mt-6 flex flex-col gap-y-2 text-3.5">-->
-<!--                        <li><a href="" class="text-[14px]">Help Center</a></li>-->
-<!--                        <li><a href="" class="text-[14px]">Terms & Services</a></li>-->
-<!--                        <li><a href="" class="text-[14px]">Legals</a></li>-->
-<!--                        <li><a href="" class="text-[14px]">Privacy Policy</a></li>-->
-<!--                        <li><a href="" class="text-[14px]">Status</a></li>-->
-<!--                    </ul>-->
-<!--                </div>-->
-<!--                <div class="flex flex-col space-y-5  mt-5 md:mt-7 lg:mt-0 md:col-span-2 lg:col-span-1 md:items-start">-->
-<!--                    <h1 class="text-[20px]">Stay up to date</h1>-->
-<!--                    <div class="flex items-center max-w-sm bg-gray p-3 rounded-md">-->
-<!--                        <input class="bg-transparent outline-none flex-1" type="text" placeholder="Your email address"/>-->
-<!--                        <button class="ml-5 flex items-center justify-center">-->
-<!--                            <i class="fa-regular fa-paper-plane" style="color: rgb(222, 226, 233);"></i>-->
-<!--                        </button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</footer>-->
+<footer class="bg-secondary px-20 md:px-40 md:py-16 py-8 text-silver">
+    <div class="max-w-[1440px] mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2">
+            <div class="flex flex-col gap-y-5 max-w-sm">
+                <img src="asset/img/logo_dark.png" class="w-40" alt="">
+                <p class="text-silver size-[14px]/[20px]">Copyright © 2020 Nexcent ltd. <br> All rights reserved </p>
+                <ul class="flex items-center gap-x-4">
+                    <li class="max-w-[32px]"><i class="bg-gray2 text-white p-1 rounded-full fa-brands fa-instagram"></i>
+                    </li>
+                    <li class="max-w-[32px]"><i class="bg-gray2 text-white p-1 rounded-full fa-brands fa-facebook"></i>
+                    </li>
+                    <li class="max-w-[32px]"><i class="bg-gray2 text-white p-1 rounded-full fa-brands fa-skype"></i>
+                    </li>
+                    <li class="max-w-[32px]"><i class="bg-gray2 text-white p-1 rounded-full fa-brands fa-youtube"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <div class="">
+                    <h1 class="text-semibold text-[20px] mt-5 md:mt-0">Company</h1>
+                    <ul class="mt-6 flex flex-col gap-y-2">
+                        <li><a href="" class="font-normal text-[14px]/[20px]">About Us</a></li>
+                        <li><a href="" class="text-[14px]/[20px]">Blog</a></li>
+                        <li><a href="" class="text-[14px]/[20px]">Contact Us</a></li>
+                        <li><a href="" class="text-[14px]/[20px]">Pricing</a></li>
+                        <li><a href="" class="text-[14px]/[20px]">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h1 class="text-semibold text-[20px] mt-5 md:mt-0">Support</h1>
+                    <ul class="mt-6 flex flex-col gap-y-2 text-3.5">
+                        <li><a href="" class="text-[14px]">Help Center</a></li>
+                        <li><a href="" class="text-[14px]">Terms & Services</a></li>
+                        <li><a href="" class="text-[14px]">Legals</a></li>
+                        <li><a href="" class="text-[14px]">Privacy Policy</a></li>
+                        <li><a href="" class="text-[14px]">Status</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col space-y-5  mt-5 md:mt-7 lg:mt-0 md:col-span-2 lg:col-span-1 md:items-start">
+                    <h1 class="text-[20px]">Stay up to date</h1>
+                    <div class="flex items-center max-w-sm bg-gray p-3 rounded-md">
+                        <input class="bg-transparent outline-none flex-1" type="text" placeholder="Your email address"/>
+                        <button class="ml-5 flex items-center justify-center">
+                            <i class="fa-regular fa-paper-plane" style="color: rgb(222, 226, 233);"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 <!--Footer Section Ends-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
         integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
 </script>
 
+<script>
+   let hamburgerBtn= document.getElementById('mobile-hamburger-btn');
+   let closeBtn= document.getElementById('mobile-close-btn');
+   let mobileSidebar= document.getElementById('mobile-sidebar');
+   let header= document.getElementById('header');
+
+   hamburgerBtn.addEventListener('click', function ()
+   {
+       // mobileSidebar.classList.toggle('hidden');
+       mobileSidebar.classList.replace('-translate-x-full' ,'translate-x-0');
+       closeBtn.classList.remove('hidden');
+       hamburgerBtn.classList.add('hidden');
+       document.body.classList.add('overflow-hidden'); // disable scroll
+   });
+
+   closeBtn.addEventListener('click', function ()
+   {
+       // mobileSidebar.classList.add('hidden');
+       mobileSidebar.classList.replace('translate-x-0' ,'-translate-x-full');
+       closeBtn.classList.add('hidden');
+       hamburgerBtn.classList.remove('hidden');
+       document.body.classList.remove('overflow-hidden'); // enable scroll again
+   })
+
+</script>
 
 </body>
 </html>
